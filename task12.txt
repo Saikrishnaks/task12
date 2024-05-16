@@ -1,0 +1,27 @@
+TASK12
+MY IP: 54.252.177.39
+Connected to ssh via this command:
+EC2 Instances created in amazon cloud and I got the ip as IP: 54.252.177.39
+ssh -i "mymachine.pem" ubuntu@ec2-54-252-177-39.ap-southeast-2.compute.amazonaws.com
+git clone the files of task10
+git clone https://github.com/Saikrishnaks/task10.git
+then start php,apache and mysql server here:
+sudo systemctl start apache2
+sudo apt install php php-mysql
+sudo apt install mysql-server
+sudo systemctl start mysql
+connecting to mysql via: sudo mysql -u root –p
+Created a database and table and user
+CREATE DATABASE  project;
+USE project;
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone_no VARCHAR(20) NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
+CREATE USER 'krishna'@'localhost' IDENTIFIED BY 'Ilovekrishna@123';
+GRANT ALL PRIVILEGES ON your_database_name.* TO 'krishna'@'localhost';
+FLUSH PRIVILEGES
